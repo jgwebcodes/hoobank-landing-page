@@ -1,7 +1,33 @@
-import React from "react";
+import styles from "./styles";
+import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "./components";
 
-const App = () => {
-	return <div>HooBank App</div>;
-};
+const App = () => (
+	<div className="bg-primary w-full overflow-hidden text-white">
+		<div className={`${styles.paddingx} ${styles.flexCenter}`}>
+			<div className={`${styles.boxWidth}`}>
+				<Navbar />
+			</div>
+		</div>
+
+		<div className={`bg-primary ${styles.boxWidth}`}>
+			<div className={`${styles.boxWidth}`}>
+				<Hero />
+			</div>
+		</div>
+
+		<div className={`bg-primary ${styles.boxWidth} ${styles.paddingx}`}>
+			<div className={`${styles.boxWidth}`}>
+				<Stats />
+				<Business />
+				<Billing />
+				<CardDeal />
+				<Testimonials />
+				<Clients />
+				<CTA />
+				<Footer />
+			</div>
+		</div>
+	</div>
+);
 
 export default App;
